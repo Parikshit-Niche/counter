@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(191, 205, 110);
+            }
+            #box {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(219, 234, 147);
+            }
+            h1 {
+                color: #3a3333; 
+            }
+            #ele1 {
+                width: 190px;
+                height: 50px;
+            }
+            #ele2 {
+                margin: 0 20px;
+                width: 100px;
+                height: 50px;
+                border-radius: 5px;
+                background-color: rgb(246, 246, 246);
+            }
+            #ele3 {
+                width: 190px;
+                height: 50px;
+            }
+            button {
+                padding: 10px;
+                font-size: 26px;
+                margin: 5px;
+                cursor: pointer;
+                background-color: #3398e1;
+                color: white;
+                border: none;
+                border-radius: 5px;
+            }
+            button:hover {
+                background-color: #4563a0;
+            }
+            #count {
+                font-size: 30px;
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Counter</h1>
+        <div id="box">
+                <div id="ele1"><button onclick="increment()">Increment(+)</button></div>
+                <div id="ele2"><h2 id="count"></h2></div>
+                <div id="ele3"><button onclick="decrement()">Decrement(-)</button></div>
+        </div>  
+        <script>
+            let num=0;
+            let countEle=document.getElementById("count");
+            countEle.innerText=num;
+
+            if(num>=0) countEle.style.color="green";
+            else countEle.style.color="red";
+
+            function increment(){
+                num++;
+                countEle.innerText=num;
+                if(num>=0) countEle.style.color="green";
+                else countEle.style.color="red";
+            }
+            function decrement(){
+                num--;
+                countEle.innerText=num;
+                if(num>=0) countEle.style.color="green";
+                else countEle.style.color="red";
+            }
+            
+
+        </script>
+    </body>
+</html>
